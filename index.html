@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="./css/index.css">
+    <script type="text/javascript" src="./javascript/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="./javascript/index.js"></script>
+    <script>
+    var playingState = "off";
+    $(document).ready(function(){
+        $("#slide-toggle").click(function(){
+            $(".wrapper-paper").animate({width: 'toggle'}, 3000);
+            var bgm = document.getElementById("bgm");
+            if(playingState == "off"){
+                bgm.play();
+                playingState == "on";
+            }else{
+                bgm.paused();
+                playingState == "off";
+            }
+        });
+    });
+    </script>
+</head>
+
+<body>
+    <audio src="./music/bgm.mp3" id="bgm">你的浏览器不支持audio标签。</audio>
+    <div id="filler"></div>
+    <div id="container">
+        <div class="eclipse eclipse-left">
+            <div class="rectangle-left"></div>
+        </div>
+        <div class="wrapper-paper">
+            <div class="xuan-paper">
+                <div class="article"></div>
+            </div>
+        </div>
+        <div class="eclipse eclipse-right" id="slide-toggle">
+            <div class="rectangle-right"></div>
+        </div> 
+    </div>
+</body>
+
+</html>

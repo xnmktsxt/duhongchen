@@ -1,0 +1,103 @@
+:root{
+    --eclipse-height: 550px;
+}
+body{
+    background: #fffff0;
+}
+
+#filler{
+    width: 100%;
+    height: 150px;
+}
+
+#container{
+    padding: 0px;
+    width: 93%;
+    margin: auto;
+    display: flex;
+}
+
+#container .wrapper-paper{
+    width: 100%;
+    height: 550px;
+    margin-top: 25px;
+    background: #e8ddcb;
+    display: none;
+    box-shadow: 0px 10px 100px #888888;
+}
+
+#container .eclipse-left{
+    border-right: 2px solid #e8ddcb;
+}
+
+#container .eclipse-right{
+    border-left: 2px solid #e8ddcb;
+}
+
+.eclipse-left .rectangle-left{
+    /* margin-top: 25px;
+    margin-bottom: 25px; */
+    height: 550px;
+    background: #e8ddcb;
+    border-right: 1px solid #5e5e5e;
+    box-shadow: 0px 4px 20px #443344;
+}
+
+.eclipse-right .rectangle-right{
+    /* margin-top: 25px;
+    margin-bottom: 25px; */
+    height: 550px;
+    background: #e8ddcb;
+    border-left: 1px solid #5e5e5e;
+    box-shadow: 0px 4px 20px #443344;
+}
+
+.wrapper-paper .xuan-paper{
+    width: auto;
+    margin: 50px;
+    /* margin-right: 50px; */
+    height: 400px;
+    padding-top: 56px;
+    background:url(../images/xuanpaper.jpg);
+}
+
+.article{
+    width: 100%;
+    height: 450px;
+    background: url(../images/article.png);
+}
+
+.eclipse{
+    position: relative;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    height: var(--eclipse-height);
+    width: 50px;
+    background: #5e5e5e;
+    /* background: #e8ddcb; */
+    z-index: 999;
+}
+
+.eclipse::before{
+    position: absolute;
+    left: -10px;
+    top: -10px;
+    content: "";
+    width: 65px;
+    height: 20px;
+    border-radius: 50%;
+    background: #a8a8a8;
+    z-index: 99;
+}
+
+.eclipse::after{
+    position: absolute;
+    left: -10px;
+    bottom: -15px;
+    content: "";
+    width: 65px;
+    height: 20px;
+    border-radius: 100%;
+    background: #a8a8a8;
+    z-index: 99;
+}
