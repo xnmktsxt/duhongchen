@@ -35,8 +35,6 @@ body{
 }
 
 .eclipse-left .rectangle-left{
-    /* margin-top: 25px;
-    margin-bottom: 25px; */
     height: 550px;
     background: #e8ddcb;
     border-right: 1px solid #5e5e5e;
@@ -44,8 +42,6 @@ body{
 }
 
 .eclipse-right .rectangle-right{
-    /* margin-top: 25px;
-    margin-bottom: 25px; */
     height: 550px;
     background: #e8ddcb;
     border-left: 1px solid #5e5e5e;
@@ -53,15 +49,33 @@ body{
 }
 
 .wrapper-paper .xuan-paper{
-    width: auto;
+    position: relative;
+    width: 1573.14px;
     margin: 50px;
-    /* margin-right: 50px; */
-    height: 400px;
-    padding-top: 56px;
+    height: 456px;
     background:url(../images/xuanpaper.jpg);
 }
 
+.xuan-paper .shushan-bg{
+    width: 100%;
+    height: 456px;
+    background-image: url(../images/shushan.jpg);
+    opacity: 0.16;
+}
+
+.xuan-paper #note{
+    position: absolute;
+    top: 2.55%;
+    right: 2.3%;
+    font-size: 28px;
+    color: rgb(0, 119, 255);
+    text-shadow: 2px 4px 1px #443344;
+    animation: note 1s infinite;
+}
+
 .article{
+    position: absolute;
+    top: 56px;
     width: 100%;
     height: 450px;
     background: url(../images/article.png);
@@ -74,7 +88,6 @@ body{
     height: var(--eclipse-height);
     width: 50px;
     background: #5e5e5e;
-    /* background: #e8ddcb; */
     z-index: 999;
 }
 
@@ -100,4 +113,13 @@ body{
     border-radius: 100%;
     background: #a8a8a8;
     z-index: 99;
+}
+
+@keyframes note{
+    0% {opacity: 1;}
+    25% {opacity: 0.5;}
+    50% {opacity: 0.5;}
+    100% {opacity: 1;}
+    /* from{opacity: 1;}
+    to{opacity: 0.5;} */
 }
